@@ -3,8 +3,8 @@ python:
     - 2.7
 script:
     - echo "sample_go"
-    - curl -XPOST https://apibeta.shippable.com/projects/53bf89f555a71a2200f1a7d5/build?token=$SHIPPABLE_API_TOKEN
+    - curl -XPOST https://apibeta.shippable.com/projects/53c8c82ed653b79d014205cd/build?token=$SHIPPABLE_API_TOKEN
     - echo "mongodb"
     - curl -XPOST https://apibeta.shippable.com/projects/53bf89f655a71a2200f1a7d7/build?token=$SHIPPABLE_API_TOKEN
     - echo "postgres"
-    - curl -XPOST https://apibeta.shippable.com/projects/53bf8a4555a71a2200f1a7d9/build?token=$SHIPPABLE_API_TOKEN
+    - curl -XPOST https://apibeta.shippable.com/projects/53c8c96cd653b79d01420659/build?token=$SHIPPABLE_API_TOKEN

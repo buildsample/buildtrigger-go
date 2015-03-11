@@ -5,4 +5,4 @@ python:
     - 2.7
 script:
     - curl -H "Authorization: apiToken $apiToken" https://api.shippable.com
-    - curl -H "Authorization: apiToken $apiToken" \-H "Content-Type: application/json" \-d "{\"projectId\": \"54ead5da91426fd6a78f75ce\"}"https://api.shippable.com/workflow/enableRepoBuild
+    - curl -H "Authorization: apiToken $apiToken" \-H "Content-Type: application/json" \-d "{\"54ead5da91426fd6a78f75ce\": \"011d01\"}"https://api.shippable.com/workflow/enableRepoBuild

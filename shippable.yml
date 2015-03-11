@@ -1,10 +1,8 @@
 language: python
+env: 
+ - secure: RGfKHvNO3+qGXsLjCH7QPeEGzY5HYfICW4krJ0a5CnMPkmbpUJOUeS7TdMavwE+s7j/NJsdspfZQXl7WM0KS5Go21UdqL95ceDtg2TcLQxvNiLxmaLSMnvvXqF4YYNcyD4WDJNYd06pmKKIv3NSd7yLmCIGPV0AlN54IHRftlLwKe+jyZdoo0yWtW4M3qvkqtbLJu8v2sqCsHpB15JTWupCuihp9QU12wczKENOplp1gwP+d9J9Ds9Q3ZPzuzpmUR3aT39tWQzYnBcE3oPteDrgugOosHl1mRdK/YwsJ3A4aDUhLe985rOuknfRVoTtL+1X0FfN34/O2U5DEGjPTeg==
 python:
     - 2.7
 script:
-    - echo "sample_go"
-    - curl -XPOST https://apibeta.shippable.com/projects/53c8c82ed653b79d014205cd/build?token=$SHIPPABLE_API_TOKEN
-    - echo "mongodb"
-    - curl -XPOST https://apibeta.shippable.com/projects/53bf89f655a71a2200f1a7d7/build?token=$SHIPPABLE_API_TOKEN
-    - echo "postgres"
-    - curl -XPOST https://apibeta.shippable.com/projects/53c8c96cd653b79d01420659/build?token=$SHIPPABLE_API_TOKEN
+    - curl -H "Authorization: apiToken $apiToken" https://api.shippable.com
+    - curl -H "Authorization: apiToken $apiToken" \-H "Content-Type: application/json" \-d "{\"projectId\": \"54ead5da91426fd6a78f75ce\"}"https://api.shippable.com/workflow/enableRepoBuild
